@@ -1,36 +1,32 @@
 # Proyek 2: Student Performance Tracker
 
-Proyek ini merupakan implementasi Tugas Proyek 2 untuk Mata Kuliah Pemrograman Python (MK44). [cite_start]Aplikasi ini dirancang untuk mengelola data kinerja mahasiswa, mengintegrasikan konsep Object-Oriented Programming (OOP) [cite: 11] [cite_start]dan Modularisasi Paket[cite: 12].
+Proyek ini merupakan implementasi Tugas Proyek 2 untuk Mata Kuliah Pemrograman Python (MK44). Aplikasi ini dirancang untuk mengelola data kinerja mahasiswa, mengintegrasikan konsep Object-Oriented Programming (OOP) dan Modularisasi Paket.
 
-[cite_start]Aplikasi ini berfungsi sebagai alat untuk mengelola data mahasiswa, kehadiran, penilaian, dan menghasilkan laporan kinerja[cite: 15].
+Aplikasi ini berfungsi sebagai alat untuk mengelola data mahasiswa, kehadiran, penilaian, dan menghasilkan laporan kinerja.
 
 ## 🎯 Fitur Utama
 
-* **Manajemen Data Mahasiswa**: Mengelola `nim`, `nama`, dan `_hadir_persen` melalui kelas `Mahasiswa`. [cite_start]Menerapkan enkapsulasi dan validasi `@property` untuk kehadiran (0-100)[cite: 25, 26, 27].
-* [cite_start]**Manajemen Penilaian**: Mengelola nilai `quiz`, `tugas`, `uts`, `uas` melalui kelas `Penilaian`[cite: 34]. [cite_start]Menerapkan validasi nilai (0-100)[cite: 36].
-* [cite_start]**Kalkulasi Nilai Akhir**: Menyediakan method `nilai_akhir()` dengan bobot (Quiz 15%, Tugas 25%, UTS 25%, UAS 35%)[cite: 35].
-* [cite_start]**Manajer Rekap**: Menggunakan kelas `RekapKelas` untuk mengelola kumpulan objek mahasiswa dan penilaian dalam struktur data dictionary[cite: 38, 41].
-* [cite_start]**Interaksi CLI**: Menyediakan antarmuka baris perintah (CLI) interaktif [cite: 85] untuk:
-    * [cite_start]Memuat data dari file `.csv`[cite: 87].
-    * [cite_start]Menambah mahasiswa baru[cite: 88].
-    * [cite_start]Mengubah data presensi[cite: 89].
-    * [cite_start]Mengubah data nilai[cite: 90].
+* **Manajemen Data Mahasiswa**: Mengelola `nim`, `nama`, dan `_hadir_persen` melalui kelas `Mahasiswa`. Menerapkan enkapsulasi dan validasi `@property` untuk kehadiran (0-100).
+* **Manajemen Penilaian**: Mengelola nilai `quiz`, `tugas`, `uts`, `uas` melalui kelas `Penilaian`. Menerapkan validasi nilai (0-100).
+* **Kalkulasi Nilai Akhir**: Menyediakan method `nilai_akhir()` dengan bobot (Quiz 15%, Tugas 25%, UTS 25%, UAS 35%).
+* **Manajer Rekap**: Menggunakan kelas `RekapKelas` untuk mengelola kumpulan objek mahasiswa dan penilaian dalam struktur data dictionary.
+* **Interaksi CLI**: Menyediakan antarmuka baris perintah (CLI) interaktif untuk:
+    * Memuat data dari file `.csv`.
+    * Menambah mahasiswa baru.
+    * Mengubah data presensi.
+    * Mengubah data nilai.
 * **Penyimpanan Data**: Perubahan yang dilakukan (tambah mahasiswa, ubah nilai, ubah presensi) akan disimpan kembali secara permanen ke file `.csv` yang sesuai.
 * **Ekspor Laporan**:
-    * [cite_start]Menghasilkan laporan rekap dalam format **Markdown** (`out/report.md`)[cite: 50, 52].
-    * (Bonus) [cite_start]Menghasilkan laporan rekap dalam format **HTML** (`out/report.html`) dengan pewarnaan baris berdasarkan predikat[cite: 127].
+    * Menghasilkan laporan rekap dalam format **Markdown** (`out/report.md`).
+    * (Bonus) Menghasilkan laporan rekap dalam format **HTML** (`out/report.html`) dengan pewarnaan baris berdasarkan predikat.
 * **Fitur Filter**:
-    * (Bonus) [cite_start]Menyediakan menu untuk menampilkan rekap mahasiswa di terminal yang memiliki nilai akhir di bawah 70[cite: 126].
+    * (Bonus) Menyediakan menu untuk menampilkan rekap mahasiswa di terminal yang memiliki nilai akhir di bawah 70.
 
 ## 📁 Struktur Proyek
 
-[cite_start]Struktur folder proyek ini dirancang sesuai dengan panduan modularisasi Minggu 10 [cite: 53-75].
+Struktur folder proyek ini dirancang sesuai dengan panduan modularisasi Minggu 10.
 
-student_performance_tracker/ ├── app.py # Titik masuk aplikasi utama (CLI) ├── README.md # Dokumentasi ini ├── requirements.txt # Daftar dependensi (misal: rich)  ├── .venv/ # Direktori virtual environment ├── data/ # Berisi data input CSV │ ├── attendance.csv # │ └── grades.csv # ├── out/ # Berisi laporan yang dihasilkan │ ├── report.md #  │ └── report.html └── tracker/ # Paket (package) Python ├── init.py # Penanda paket, mengekspor simbol ├── main.py # (Bonus) Entry point untuk python -m tracker ├── mahasiswa.py # Modul Class Mahasiswa ├── penilaian.py # Modul Class Penilaian ├── rekap_kelas.py # Modul Class RekapKelas (Manajer) └── report.py # Modul fungsi laporan 
-
-
-
-
+student_performance_tracker/ ├── app.py # Titik masuk aplikasi utama (CLI) ├── README.md # Dokumentasi ini ├── requirements.txt # Daftar dependensi (misal: rich) ├── .venv/ # Direktori virtual environment ├── data/ # Berisi data input CSV │ ├── attendance.csv │ └── grades.csv ├── out/ # Berisi laporan yang dihasilkan │ ├── report.md │ └── report.html └── tracker/ # Paket (package) Python ├── init.py # Penanda paket, mengekspor simbol ├── main.py # (Bonus) Entry point untuk python -m tracker ├── mahasiswa.py # Modul Class Mahasiswa ├── penilaian.py # Modul Class Penilaian ├── rekap_kelas.py # Modul Class RekapKelas (Manajer) └── report.py # Modul fungsi laporan
 
 
 ## 🚀 Cara Menjalankan
